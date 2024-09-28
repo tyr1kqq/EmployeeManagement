@@ -23,6 +23,7 @@ namespace EmployeeManagement
 
             IUnityContainer unityContainer = new UnityContainer();
              
+            unityContainer.RegisterType<ILoogger , Logger>();
             unityContainer.RegisterType<IEmployeeRepository , EmployeeRepository>();
             unityContainer.RegisterType<IEmployeesViewModel , EmployeesViewModel>();
 

@@ -19,7 +19,7 @@ namespace EmployeeManagement.ViewModels
         private IEmployeeRepository _employeeRepository;
         public EmployeesViewModel(IEmployeeRepository employeeRepository)
         {
-            _employeeRepository = new EmployeeRepository();
+            _employeeRepository = employeeRepository;
             FillListView();
             FillFilterMessage();
         }

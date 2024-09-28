@@ -1,4 +1,5 @@
 ﻿using EmployeeManagement.Models;
+using EmployeeManagement.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,6 +24,7 @@ namespace EmployeeManagement.Views
         public EmployessView()
         {
             InitializeComponent();
+            DataContext = new EmployeesViewModel(new EmployeeRepository());
         }
 
         private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
